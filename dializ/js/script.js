@@ -1,8 +1,8 @@
+$(document).ready(function () {
+	$('.side img').each(function () {
+		$(this).css({height:$(this).parent().outerHeight()+'px', width:'auto'})
+	});
 
-$('.side img').each(function () {
-	$(this).css({height:$(this).parent().outerHeight()+'px', width:'auto'})
-});
-(function($) {
 	$("div.tabs__caption").on("click", "li:not(.active)", function() {
 		$(this)
 			.addClass("active")
@@ -14,24 +14,22 @@ $('.side img').each(function () {
 			.eq($(this).index())
 			.addClass("active");
 	});
-})(jQuery);
 
-(function($) {
+
 	$('h2.ills').on("click", function () {
 		if (window.innerWidth <= 810) {
 			$('.tabs__caption li').each(function () {
 				$(this).toggleClass("show");
-				$(this).on("click", function () {
-					$('.tabs__caption li').each(function () {
-						$(this).removeClass("show");
-					})
-				})
 			})
 		}
 	});
-})(jQuery);
+	$('.tabs__caption li').on("click",function () {
+		$('.tabs__caption li').each(function () {
+			$(this).removeClass("show");
+		})
+	});
 
-(function($) {
+
 	var $nav =$('#navigation');
 	var $h = $nav.offset().top;
 	var $sc;
@@ -54,38 +52,42 @@ $('.side img').each(function () {
 			$('header').css({'padding-bottom': 0});
 		}
 	});
-})(jQuery);
 
-$(document).ready(function(){
+
 	$("#navigation").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top-$('#navigation').height();
 		$('body,html').animate({scrollTop: top}, 1000);
 	});
-});
 
 
-(function($){
 	var $li = $('menu li:not(:first)');
 	$li.on("click",function () {
 		$('#svg_1, #svg_2, #svg_3').removeClass("svg_1 svg_2 svg_3");
 		$li.stop().removeAttr('style');
 	});
+
 	$('.burger').on("click",function () {
 		$('#svg_1').toggleClass("svg_1");
 		$('#svg_2').toggleClass("svg_2");
 		$('#svg_3').toggleClass("svg_3");
 		$li.stop().slideToggle(1000)
 	});
-})(jQuery);
 
 
-$(window).on("resize",function () {
-	if (window.innerWidth>770){
-		$('menu li:not(:first)').removeAttr('style');
-	}
+	$(window).on("resize",function () {
+		if (window.innerWidth>770){
+			$('menu li:not(:first)').removeAttr('style');
+			if ($li.is(':visible')){
+				$('#svg_1').removeClass("svg_1");
+				$('#svg_2').removeClass("svg_2");
+				$('#svg_3').removeClass("svg_3");
+			} 
+		}
+	});
 });
+
 
 
 
