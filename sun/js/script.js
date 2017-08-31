@@ -1,4 +1,3 @@
-$(document).ready(function() {
 	let $slider = $('#slider');
 	$slider.find('div').each(function () {
 		$(this).data('number', $(this).parent().attr('class'));
@@ -56,5 +55,5 @@ $(document).ready(function() {
 		}
 
 	}
-});
+
 
