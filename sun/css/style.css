@@ -76,7 +76,6 @@ ul .active{
 }
 
 .right {
-	content:"";
 	display: block;
 	width: 60px;
 	height: 60px;
