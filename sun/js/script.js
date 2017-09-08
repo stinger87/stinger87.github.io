@@ -7,11 +7,11 @@ $( document ).ready(function() {
 	$('.round:first').addClass('point');
 
 	$('.right').on('click', function () {
-		side(0);
+		change();
 		inter();
 	});
 	$('.left').on('click', function () {
-		side(1);
+		side();
 		inter();
 	});
 	$('.round').on('click', function () {
@@ -30,21 +30,19 @@ $( document ).ready(function() {
 	});
 
 	function change() {
-
-		if (index >= $length) {
-			index = 0
-		}
-		if (index < 0) {
-			index = $length - 1
+		if (index+1 < $length) {
+			index++
+		} else {
+			index=0
 		}
 		$('#slider li').removeClass('active').eq(index).addClass('active');
 		$('.circle').children().removeClass('point').eq(index).addClass('point');
 	}
-	function side(left) {
-		if (left) {
+	function side() {
+		if (index>0) {
 			index--
 		} else {
-			index++
+			index=$length-1
 		}
 		$('#slider li').removeClass('active').eq(index).addClass('active');
 		$('.circle').children().removeClass('point').eq(index).addClass('point');
