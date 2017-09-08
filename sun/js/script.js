@@ -51,6 +51,7 @@
 	function number(i) {
 		$('#slider li').removeClass('active').eq(i).addClass('active');
 		$('.circle').children().removeClass('point').eq(i).addClass('point');
+		index=i;
 	}
 
 	function inter() {
