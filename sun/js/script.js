@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+
 	let $length = $('#slider').children().length;
 	let interval;
 	let index = 0;
@@ -63,7 +63,7 @@ $( document ).ready(function() {
 			$('.circle').append('<span class="round"></span>')
 		}
 	}
-});
+
 
 
 
