@@ -15,7 +15,7 @@
 		inter();
 	});
 	$('.round').on('click', function () {
-		number($(this).index());
+		slide($(this).index());
 		inter();
 	});
 
@@ -35,8 +35,7 @@
 		} else {
 			index=0
 		}
-		$('#slider li').removeClass('active').eq(index).addClass('active');
-		$('.circle').children().removeClass('point').eq(index).addClass('point');
+		slide(index)
 	}
 	function side() {
 		if (index>0) {
@@ -44,11 +43,10 @@
 		} else {
 			index=$length-1
 		}
-		$('#slider li').removeClass('active').eq(index).addClass('active');
-		$('.circle').children().removeClass('point').eq(index).addClass('point');
+		slide(index)
 	}
 
-	function number(i) {
+	function slide(i) {
 		$('#slider li').removeClass('active').eq(i).addClass('active');
 		$('.circle').children().removeClass('point').eq(i).addClass('point');
 		index=i;
