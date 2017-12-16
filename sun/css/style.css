@@ -366,13 +366,7 @@ footer p {
 	}
 
 }
-@media (max-width: 850px) {
 
-	.leftSide,
-	.rightSide {
-		position: static;
-	}
-}
 
 
 
