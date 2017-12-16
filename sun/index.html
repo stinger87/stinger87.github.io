@@ -7,26 +7,55 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="button">
-	<label for="day" class="sun"><input type="radio" name="time" id="day" checked></label>
-	<label for="night" class="moon"><input type="radio" name="time" id="night"></label>
-</div>
-
-<ul id="slider">
-	<li class="first active">
-		<div class="night"></div><div class="day active"></div></li>
-	<li class="second">
-		<div class="night"></div><div class="day active"></div></li>
-	<li class="third">
-		<div class="night"></div><div class="day active"></div></li>
-	<li class="fourth">
-		<div class="night"></div><div class="day active"></div></li>
-	<li class="fifth">
-		<div class="night"></div><div class="day active"></div></li>
-</ul>
-<span class="left"></span>
-<span class="right"></span>
-<div class="circle"></div>
+<main>
+	<ul id="slider">
+		<li class="first active">
+			<div class="night"></div><div class="day active"></div></li>
+		<li class="second">
+			<div class="night"></div><div class="day active"></div></li>
+		<li class="third">
+			<div class="night"></div><div class="day active"></div></li>
+		<li class="fourth">
+			<div class="night"></div><div class="day active"></div></li>
+		<li class="fifth">
+			<div class="night"></div><div class="day active"></div></li>
+	</ul>
+	<div class="circle"></div>
+</main>
+<section class="leftSide">
+	<img src="images/logo.png" alt="">
+	<ul>
+		<li class="about"><a href="#">О комплексе</a></li>
+		<li class="flat"><a href="#">Планировки квартир</a></li>
+		<li class="mortgage"><a href="#">Ипотека</a></li>
+		<li class="price"><a href="#">Цены</a></li>
+		<li class="worker"><a href="#">Застройщик</a></li>
+		<li class="gallery"><a href="#">Галерея</a></li>
+		<li class="news"><a href="#">Новости</a></li>
+		<li class="contacts"><a href="#">Контакты</a></li>
+	</ul>
+	<span class="left"></span>
+</section>
+<section class="rightSide">
+	<div id="button">
+		<label for="day" class="sun"><input type="radio" name="time" id="day" checked></label>
+		<label for="night" class="moon"><input type="radio" name="time" id="night"></label>
+	</div>
+	<span class="right"></span>
+</section>
+<section class="bottom_menu">
+	<ul>
+		<li><a href="#" class="architecture">Архитектура</a></li>
+		<li><a href="#" class="infrastructure">Инфраструктура</a></li>
+		<li><a href="#" class="place">Местоположение</a></li>
+	</ul>
+</section>
+	<iframe class="map hide" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10379.536310625012!2d26.96055563755545!3d49.430005569559704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473206e4429b9917%3A0x7112bf306dd7f886!2z0L_QsNGA0Log0ZbQvNC10L3RliDQp9C10LrQvNCw0L3QsCwg0KXQvNC10LvRjNC90LjRhtGM0LrQuNC5LCDQpdC80LXQu9GM0L3QuNGG0YzQutCwINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sua!4v1511009997785" frameborder="0" style="border:0" ></iframe>
+<footer>
+	<p>Адрес: город Воронеж, проспект Труда, 72,74</p>
+	<p>Тел: +3 (123) 45-48-879, +3 (123) 45-48-879</p>
+	<p>© 2014 ЖК Солнечный</p>
+</footer>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
 </body>
