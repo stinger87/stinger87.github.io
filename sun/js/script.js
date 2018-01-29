@@ -150,10 +150,12 @@ $('.arrow').on('click',leftShow);
 $('.leftSide a').on('click',leftShow);
 
 function leftShow() {
-	if ($('.leftSide').hasClass('leftPosition')){
-		$('.leftSide').addClass('leftShow').removeClass('leftPosition');
-	} else {
-		$('.leftSide').addClass('leftPosition').removeClass('leftShow');
+	if($(window).width()<850){
+		if ($('.leftSide').hasClass('leftPosition')){
+			$('.leftSide').addClass('leftShow').removeClass('leftPosition');
+		} else {
+			$('.leftSide').addClass('leftPosition').removeClass('leftShow');
+		}
 	}
 }
 
